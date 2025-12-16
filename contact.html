@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<title>B-Bakery Bootstrap Project</title>
+
+	<!-- meta tags -->
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta name="title" content="B-Bakery Bootstrap Project">
+	<meta name="description" content="Bakery Web Template with Bootstrap 4, CSS animations, JavaScript, JQuery and localstorge usage in shopping cart feature.">
+	<meta name="author" content="Seinn Let">
+	<meta name="keywords" content="bakery, bakery template, b-bakery, free template">
+	<meta name="robots" content="index, follow"/>
+
+	<!-- bootstrap -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+	<!-- fontawesome -->
+	<link rel="stylesheet" type="text/css" href="vendor/fontawesome/css/all.min.css">
+	
+	<!-- owlcarousel -->
+	<link rel="stylesheet" type="text/css" href="vendor/owlcarousel/owl.carousel.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/owlcarousel/owl.theme.default.min.css">
+	
+	<!-- aos -->
+	<link rel="stylesheet" type="text/css" href="vendor/aos/aos.css">
+
+	<!-- logo -->
+	<link rel="icon" href="images/logo.png" type="image/png" sizes="16x16">
+
+	<!-- custom css -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+<body>
+	
+	<header>
+		<nav class="navbar navbar-expand-lg fixed-top menu">
+			<div class="container px-md-0">
+				<a class="navbar-brand" href="index.html"><span>B</span>-Bakery</a>
+				
+				<a href="cart.html" class="d-lg-none d-md-inline-block btn ml-auto pr-3 pt-2"><i class="fas fa-shopping-basket icon-light-white pr-2"></i><sup><span class=" badge badge-brown badge-pill label-count">0</span></sup></a>
+
+				<button class="animate-toggler d-lg-none d-md-inline-block" type="button" data-target="#myNav" data-toggle="collapse">
+				<i></i><i></i><i></i>
+				</button>
+				
+				<div class="collapse navbar-collapse" id="myNav">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item">
+							<a class="nav-link" href="about.html">About Us</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="product.html">Our Products</a>
+						</li>
+						<li class="nav-item active">
+							<a class="nav-link" href="contact.html">Contact Us</a>
+						</li>
+					</ul>
+					<span class="navbar-text">
+						<input type="text" name="search" id="searchbox" placeholder="Enter Keyword..." autofocus class="shadow p-2" style="display: none;">
+						<button class="btn btn-search"><i class="fas fa-search icon-light"></i></button>
+						<a href="cart.html" class="btn ml-lg-3  d-none d-lg-inline-block"><i class="fas fa-shopping-basket icon-light"></i><sup><span class="ml-1 badge badge-brown badge-pill label-count">0</span></sup></a>
+						<button class="btn btn-outline-dark ml-lg-4 btn-login" data-toggle="modal" data-target="#loginModal">Log In</button>
+					</span>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<main>
+		<section id="space-banner"></section>
+
+		<section id="contact">
+			<div class="container py-5">
+				<h2 class="section-title">Contact Us</h2>
+
+				<div class="row">
+					<div class="col-md-6">
+
+						<h5 class="font-weight-bold mb-5">Contact Information</h5>
+						
+						<div class="mb-5">
+							<span class="border-right border-warning mr-3 d-inline-block" style="width: 40px"><i class="fas fa-mobile-alt fa-lg mt-1"></i></span>
+							Phone: +95 920 3248 302
+						</div>
+
+						<div class="mb-5">
+							<span class="border-right border-warning mr-3 d-inline-block" style="width: 40px"><i class="far fa-envelope fa-lg mt-1"></i></span>
+							Email: info@bbakery.com
+						</div>
+
+						<div class="mb-5">
+							<span class="border-right border-warning mr-3 d-inline-block" style="width: 40px"><i class="fas fa-map-marker-alt fa-lg mt-1"></i></span>
+							Address: Sanchaung Township, Yangon
+						</div>
+
+						<div class="mb-5">
+							<strong class="text-dark">Find us on :</strong>
+
+							<a href="https://facebook.com" target="_blank" class="text-secondary" data-toggle="tooltip" data-placement="top" title="Facebook">
+								<span class="fa-stack px-4">
+								  <i class="fas fa-circle fa-stack-2x"></i>
+								  <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+								</span>
+							</a>
+
+							<a href="https://instagram.com" target="_blank" class="text-secondary" data-toggle="tooltip" data-placement="top" title="Instagram">
+								<span class="fa-stack px-4">
+								  <i class="fas fa-circle fa-stack-2x"></i>
+								  <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+								</span>
+							</a>
+
+							<a href="https://twitter.com" target="_blank" class="text-secondary" data-toggle="tooltip" data-placement="top" title="Twitter">
+								<span class="fa-stack px-4">
+								  <i class="fas fa-circle fa-stack-2x"></i>
+								  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+								</span>
+							</a>
+
+						</div>
+					</div>
+
+					<div class="col-md-6">
+						<div class="bg-light py-4 px-5 rounded">
+							<form>
+								<div class="form-row mb-3">
+									<label for="name">Name: </label>
+									<input type="text" name="name" id="name" required class="form-control" placeholder="Full Name">
+								</div>
+									
+								<div class="form-row mb-3">
+									<label for="email">Email: </label>
+									<input type="email" name="email" id="email" required class="form-control" placeholder="Email Address">
+								</div>
+
+								<div class="form-row mb-3">
+									<label for="message">Message: </label>
+									<textarea class="form-control" id="message" placeholder="Write a Message to us..." rows="5"></textarea>
+								</div>
+
+
+							</form>
+						</div>
+					</div>
+				</div>
+
+				<iframe data-aos="fade-up" data-aos-interval="3000" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12662.721893625392!2d96.1283812220052!3d16.806110610294752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1eb46fd85e9eb%3A0xf8fce784abe0fff6!2sSanchaung%20Township%2C%20Yangon!5e0!3m2!1sen!2smm!4v1593959227708!5m2!1sen!2smm" width="100%" height="450" frameborder="0" style="border:10px solid #F8F9FA; margin-top: 30px;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+			</div>
+		</section>
+	</main>
+
+	<footer class="pt-5 text-center">
+		<h3 class="text-center font-italic" data-aos="fade-down" data-aos-duration="1000">We Baked Every Day for You...</h3>
+		<hr>
+		<div class="container">
+			<div class="row">
+
+				<div class="col-md-4 mb-4">
+					<h4>Opening Hours</h4>
+					<div class="row opening-hour">
+						<div class="col-5">Mon - Fri</div>	
+						<div class="col-7">08:00 to 09:00</div>	
+
+						<div class="col-5">Sat - Sun</div>	
+						<div class="col-7">08:00 to 06:00</div>	
+
+						<div class="col-5 text-warning mt-3">Happy Hour</div>	
+						<div class="col-7 text-warning mt-3">11:00 to 01:00</div>	
+					</div>
+				</div>
+
+				<div class="col-md-4 mb-4">
+					<h4>Address</h4>
+					<p>No.15, Myay Nu Street, <br> Sanchaung Township, Yangon</p>
+					<p>+95 920 3248 302</p>
+				</div>
+
+				<div class="col-md-4 mb-4">
+					<h4>Newsletter</h4>
+					<form>
+						<input type="email" name="email" required placeholder="Your Email...">
+						<button><i class="fas fa-paper-plane"></i></button>
+					</form>
+					<p class="mt-4">Subscribe to get regular updates and events.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="div-footer text-center py-4">
+			Copyright © 2020 B-Bakery Bootstrap Project by <a href="https://seinnletlethninn.me" target="_blank" class="text-white">Seinn Let</a>.
+		</div>
+	</footer>
+
+	<!-- Modal -->
+	<div class="modal" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModal" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header border-0 pb-0">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body px-4">
+					<ul class="nav nav-pills mb-3 nav-justified" id="pills-tab" role="tablist">
+						<li class="nav-item" role="presentation">
+						<a class="nav-link font-weight-bold active" id="pills-login-tab" data-toggle="pill" href="#pills-login" role="tab" aria-controls="pills-login" aria-selected="true">Log In</a>
+						</li>
+						<li class="nav-item" role="presentation">
+						<a class="nav-link font-weight-bold" id="pills-register-tab" data-toggle="pill" href="#pills-register" role="tab" aria-controls="pills-register" aria-selected="false">Register</a>
+						</li>
+					</ul>
+					<div class="tab-content" id="pills-tabContent">
+						<div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="pills-login-tab">
+							<form id="custom-form">
+								<div class="group">      
+									<input type="email" required>
+									<span class="highlight"></span>
+									<span class="bar"></span>
+									<label>Email Address</label>
+								</div>
+
+								<div class="group">      
+									<input type="password" required>
+									<span class="highlight"></span>
+									<span class="bar"></span>
+									<label>Password</label>
+								</div>
+
+								<p class="text-right mb-4"><a href="#" class="text-muted">Forget Password?</a></p>
+
+								<button class="btn btn-block btn-dark py-2 mb-4">Login</button>
+								<p class="text-center text-secondary"><small>Or Login With</small></p>
+
+								<div class="row mb-4">
+									<div class="col-6"><button type="button" class="btn shadow btn-block btn-facebook"><i class="fab fa-facebook-f pr-2"></i> Facebook</button></div>
+
+									<div class="col-6"><button type="button" class="btn shadow btn-block btn-google"><i class="fab fa-google pr-2"></i> Google</button></div>
+								</div>
+							</form>
+
+						</div>
+						<div class="tab-pane fade" id="pills-register" role="tabpanel" aria-labelledby="pills-register-tab">
+							<form id="custom-form">
+								<div class="group">      
+									<input type="text" required>
+									<span class="highlight"></span>
+									<span class="bar"></span>
+									<label>User Name</label>
+								</div>
+
+								<div class="group">      
+									<input type="email" required>
+									<span class="highlight"></span>
+									<span class="bar"></span>
+									<label>Email Address</label>
+								</div>
+
+								<div class="group">      
+									<input type="password" required>
+									<span class="highlight"></span>
+									<span class="bar"></span>
+									<label>Password</label>
+								</div>
+
+								<input type="checkbox" name="chkagree" style="width: auto; display: inline;"> I agree with terms and conditions.
+
+								<button class="btn btn-block btn-dark py-2 mt-5 mb-4">Register</button>
+							</form>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- scripts -->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+
+	<!-- vendor -->
+	<script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
+	<script type="text/javascript" src="vendor/owlcarousel/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="vendor/owlcarousel/jquery.mousewheel.min.js"></script>
+	<script type="text/javascript" src="vendor/jquery-ui/jquery-ui.js"></script>
+	<script type="text/javascript" src="vendor/aos/aos.js"></script>
+
+	<!-- custom -->
+	<script type="text/javascript" src="js/custom.js"></script>
+	<script type="text/javascript" src="js/localstorage.js"></script>
+</body>
+</html>
